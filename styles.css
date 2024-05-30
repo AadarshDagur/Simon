@@ -11,10 +11,18 @@ h1{
 
 }
 
+h3{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  margin: 5%;
+  color: #c5a411;
+
+}
+
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 1.5rem;
-  margin:  5%;
+  margin-top: 5%;
   color: #FEF2BF;
 }
 
@@ -34,10 +42,66 @@ h1{
   border-radius: 20%;
 }
 
+.start{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  margin: 2%;
+  color: #c5a411;
+  background-color: #064a93;
+  border: 2px solid #c5a411;
+  height: 80px;
+}
+
+#instruction-heading{
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 3%;
+
+}
+
+.instructions{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  margin-top: 5%;
+  color: #c5a411;
+  height: 80px;
+}
+
+.popup{
+  font-family: 'Press Start 2P', cursive;
+  display: inline-block;
+  text-align: left;
+  font-size: 0.8rem;
+  color: #FEF2BF;
+}
+.close{
+  text-align: center;
+}
+
+.close>button{
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #c5a411;
+  border: 2px solid #c5a411;
+  border-radius: 10px;
+  background-color: #064a93;
+}
+
+.inst-button{
+  font-family: 'Press Start 2P', cursive;
+  background-color: #064a93;
+  border: 2px solid #c5a411;
+  color: #c5a411;
+  border-radius: 5px;
+  padding: 5px;
+}
+
 .game-over {
   background-color: red;
   opacity: 0.8;
 }
+
 
 .red {
   background-color: red;
