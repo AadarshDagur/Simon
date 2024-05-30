@@ -63,7 +63,7 @@ $(".container .btn").click(function (){
         userClickedPattern=[];
         var audio1=new Audio("./sounds/wrong.mp3");
         audio1.play();
-        $("h2").text("GAME OVER..PRESS ANY KEY OR CLICK BELOW TO RESTART THE GAME")
+        $("level-title").text("GAME OVER..PRESS ANY KEY OR CLICK BELOW TO RESTART THE GAME")
         $("body").addClass("game-over");
         setTimeout(function (){$("body").removeClass("game-over");},200);
         $(".start").slideDown(70);
