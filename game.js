@@ -1,8 +1,31 @@
+//Instructions
+
+$(".popup").hide();
+
+$(".inst-button").click(function(){
+    $(".popup").slideDown();
+    $(".instructions").hide();
+})
+
+$(".close").click(function(){
+    $(".popup").slideUp();
+    $(".instructions").show();
+})
+
+//GamePlay Logic
+
 buttonColours = ["red", "blue", "green", "yellow"];
 gamePattern=[];
 var c=0;
 var x=0;
+var highScore=0;
 $(document).keypress(function() {
+    if (x==0){nextSequence();
+        x++;
+    }
+});
+$(".start").click(function() {
+    $(".start").slideUp(70);
     if (x==0){nextSequence();
         x++;
     }
@@ -11,17 +34,22 @@ $(document).keypress(function() {
 function nextSequence(){
     userClickedPattern = [];
     c++;
+    if (c-1>highScore){
+        highScore=c-1;
+    
+    }
+    $("h3").text("HIGH SCORE: "+highScore);
     randomNumber = Math.floor(Math.random() * 4);
     randomChosenColour = buttonColours[randomNumber];
     gamePattern.push(randomChosenColour)
-    $("h2").text("Level "+c);
+    $("#level-title").text("Level "+c);
     $("." + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
     playSound(randomChosenColour);
     i=0;
 }
 
 var i=0;
-$(".btn").click(function (){
+$(".container .btn").click(function (){
     var userChosenColour = this.id;
     userClickedPattern.push(userChosenColour);
 
@@ -57,3 +85,4 @@ function animatePress(currentColour){
         $("."+currentColour).removeClass("pressed"); 
     },100);
 }
+
